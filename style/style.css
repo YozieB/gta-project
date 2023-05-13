@@ -1,0 +1,134 @@
+@import url("./vendor/fonts.css");
+@import url("./vendor/vars.css");
+.page {
+  height: var(--vh);
+  background-image: url("../img/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "DIN PRO", sans-serif;
+}
+
+.dialog {
+  height: var(--vh);
+  padding-top: 2vw;
+  padding-bottom: 4vw;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.dialog__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 2vw;
+  padding-left: 5vw;
+  color: var(--white);
+}
+.dialog__heading-info {
+  display: flex;
+  gap: 0 2vw;
+  align-items: center;
+}
+.dialog__heading-title {
+  font-size: 3.2vw;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 700;
+}
+.dialog__heading-subtitle {
+  margin: 0;
+  font-size: 2.5vw;
+  font-weight: 300;
+  color: var(--gray);
+}
+.dialog__button {
+  width: 5vmax;
+  height: 5vmax;
+  background-color: transparent;
+  background-size: contain;
+  outline: none;
+  border: none;
+  padding: 0;
+  background-image: url("../img/close-btn.svg");
+  background-position: center;
+}
+.dialog__grid {
+  box-sizing: border-box;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 100%;
+  gap: 1.2vw;
+  padding: 2vw 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.dialog__grid::-webkit-scrollbar {
+  display: none;
+}
+.dialog__grid:has(> :last-child:nth-child(n+4)) {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 2fr;
+}
+.dialog__grid:has(> :last-child:nth-child(n+4)) .dialog__grid-item {
+  width: unset;
+}
+.dialog__grid:has(> :last-child:nth-child(n+5)) {
+  grid-template-rows: 1fr 1fr;
+  align-items: normal;
+}
+.dialog__grid:has(> :last-child:nth-child(n+5)) .dialog__grid-item {
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill-available;
+}
+.dialog__grid:has(> :last-child:nth-child(n+9)) {
+  grid-auto-flow: column;
+  grid-auto-columns: 9vw;
+  justify-content: start;
+  overflow-x: scroll;
+  grid-template-columns: repeat(8, 9.5vw);
+  padding: 2vw 2vw 2vw 5vw;
+  scroll-snap-type: x proximity;
+}
+.dialog__grid-heading {
+  font-size: 2vw;
+}
+.dialog__grid-price {
+  font-size: 2.5vw;
+}
+.dialog__grid-image {
+  width: 3vmax;
+  height: 3vmax;
+}
+.dialog__grid-text--gold {
+  color: var(--gold);
+}
+.dialog__grid-text--green {
+  color: var(--green);
+}
+.dialog__grid-item {
+  padding: 1.5vw;
+  color: var(--white);
+  font-size: 1.5vw;
+  grid-column: 2 span;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw 0;
+  height: 13vw;
+  justify-content: space-between;
+  width: 18vw;
+  border-radius: 1vw;
+  background: linear-gradient(180deg, #141a1e 0%, rgba(20, 26, 30, 0.32) 100%);
+  transition: background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.dialog__grid-item:active {
+  background: linear-gradient(180deg, #141a1e 0%, rgba(20, 26, 30, 0.8) 100%);
+}/*# sourceMappingURL=style.css.map */

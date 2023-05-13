@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "DIN PRO";
+  src: url("../../fonts/DINPro-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DIN PRO";
+  src: url("../../fonts/DINPro-CondensedBold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DIN PRO";
+  src: url("../../fonts/DINPro-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
